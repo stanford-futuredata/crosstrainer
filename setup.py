@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='crosstrainer',
-      version='0.1.2',
+      version='0.1.5',
       description='CrossTrainer: Practical Domain Adaptation with Loss Reweighting',
       long_description=long_description,
       long_description_content_type="text/markdown",
@@ -15,9 +15,8 @@ setup(name='crosstrainer',
       packages=['crosstrainer'],
       test_suite='nose.collector',
       tests_require=['nose'],
-      install_require=[
-            'markdown',
-            'sklearn',
+      install_requires=[
+            'scikit-learn',
             'numpy',
             'scipy',
       ],

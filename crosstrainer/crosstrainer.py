@@ -10,7 +10,8 @@ class CrossTrainer(BaseEstimator, ClassifierMixin):
         """
         Initialize the CrossTrainer class.
 
-        :param clf: The base classifier with a fit() function. (Ex: sklearn's SGDClassifier(...))
+        :param clf: The base classifier with a fit() function that takes a sample_weight argument.
+                    (Ex: sklearn's SGDClassifier(...))
         :param k: The number of folds in k-fold cross-validation for fine-tuning the weighting parameter alpha.
         :param delta: The precision of the approximation of the optimal value of alpha.
         """

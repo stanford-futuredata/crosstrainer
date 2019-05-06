@@ -11,7 +11,7 @@ pip install crosstrainer
 
 ### Usage
 
-CrossTrainer utilizes loss reweighting to train machine learning models between data from a target task with supplementary source data.
+CrossTrainer utilizes loss reweighting to train machine learning models using data from a target task with supplementary source data.
 
 ##### Inputs:
 Base model, target data, source data.
@@ -22,7 +22,7 @@ Trained model with optimized weighting parameter alpha.
 ##### Example:
 
 ```python
-import crosstrainer
+from crosstrainer import CrossTrainer
 from sklearn import linear_model
 
 lr = linear_model.LogisticRegression()
@@ -31,4 +31,4 @@ lr, alpha = ct.fit(X_target, y_target, X_source, y_source)
 y_pred = lr.predict(X_test)
 ```
 
-More examples can be found in the test file: ```crosstrainer/tests/test_crosstrainer.py```.
+More examples can be found in the tests file: ```crosstrainer/tests/test_crosstrainer.py```.
